@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climb Guide Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-image"></div>
+    
+    <h1 class="header">Réserver une place dans un refuge pour votre prochaine aventure en montagne</h1>
+
+    <div class="searchBox">
+        <div class="country">
+            <label for="country">Pays :</label>
+            <select name="country" id="country">
+                <option value="">-- Choisissez une option --</option>
+                <option value="Maroc">Maroc</option>
+                <option value="France">France</option>
+            </select>
+        </div>
+        <div class="region">
+            <label for="regions">Région :</label>
+            <select name="region" id="regions">
+                <option value="">-- Choisissez une option --</option>
+            </select>
+        </div>
+        <div class="sommet">
+            <label for="mountains">Sommet :</label>
+            <select name="mountains" id="mountains">
+                <option value="">-- Choisissez une option --</option>
+
+            </select>
+        </div>
+        <input type="submit" class="submit" value="Rechercher" onclick="displayRefuges()" >
+    </div>
+    <div class="refuges">
+        <div class="refuge">
+            <img src="images/2.jpg" alt="Refuge Toubkal">
+            <div class="refuge-info">
+                <h3>REFUGE TOUBKAL-CAF</h3>
+                <p>Atlas - 3207 m - 80 places</p>
+                <p>Gardien(ne) : Mohamed Toubkal</p>
+                <p>Tel : 0623456789</p>
+                <p>
+                    Situé dans les montagnes de l'Atlas, le refuge Toubkal est un point de départ parfait pour explorer le sommet du Toubkal.
+                </p>
+                <button >
+                    <a href="/page-de-refuges/public/index.html?id=2" target="_blank"  >Voir le site</a>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="refuges-list">
+        <div class="refuge">
+            <img src="images/1.jpg" alt="Refuge CAF Oukaimeden">
+            <div class="refuge-info">
+                <h3>Refuge CAF Oukaimeden</h3>
+                <p>Oukaimeden - 2600 m - 45 places</p>
+                <p>Gardien(ne) : Ahmed El Mouden</p>
+                <p>Tel : 0612345678</p>
+                <p>
+                    Refuge situ‚ au pied des pistes de ski d'Oukaimeden.
+                </p>
+                <button ><a href="/page-de-refuges/public/index.html?id=1" target="_blank" >Voir le site</a></button>
+            </div>
+        </div>
+        <div class="refuge">
+            <img src="images/2.jpg" alt="Refuge Toubkal">
+            <div class="refuge-info">
+                <h3>REFUGE TOUBKAL-CAF</h3>
+                <p>Atlas - 3207 m - 80 places</p>
+                <p>Gardien(ne) : Mohamed Toubkal</p>
+                <p>Tel : 0623456789</p>
+                <p>
+                    Situé dans les montagnes de l'Atlas, le refuge Toubkal est un point de départ parfait pour explorer le sommet du Toubkal.
+                </p>
+                <button><a href="/page-de-refuges/public/index.html?id=2" target="_blank"  onclick="">Voir le site</a></button>
+            </div>
+        </div>
+        <div class="refuge">
+            <img src="images/4.jpg" alt="Refuge de la Tazarhart">
+            <div class="refuge-info">
+                <h3>Refuge de la Tazarhart</h3>
+                <p>Tazarhart, Maroc-3000-30 places</p>
+                <p>Gardien(ne) : Rachid Ben Salah</p>
+                <p>Tel : 0645678901</p>
+                <p>Refuge isol‚ pour les amateurs de montagne sauvage.</p>
+                <button><a href="/page-de-refuges/public/index.html?id=4" target="_blank"> Voir le site</a></button>
+
+            </div>
+        </div>
+        <div class="refuge">
+            <img src="images/5.jpg" alt="Refuge Targdite">
+            <div class="refuge-info">
+                <h3>Refuge Targdite</h3>
+                <p>Mgoun, Maroc-2900-50 places</p>
+                <p>Gardien(ne) : Hassan Mgoun</p>
+                <p>Tel : 0656789012</p>
+                <p>Refuge id‚al pour explorer le sommet Mgoun.</p>
+                <button><a href="/page-de-refuges/public/index.html?id=5" target="_blank"> Voir le site</a></button>
+
+            </div>
+        </div>
+        <div class="refuge">
+            <img src="images/11.jpg" alt="Refuge Aarouss">
+            <div class="refuge-info">
+                <h3>Refuge Aarouss</h3>
+                <p>Azilal, Maroc-2600-35 places</p>
+                <p>Gardien(ne) : Amine Ait Ali</p>
+                <p>Tel : 0678541324</p>
+                <p>Deuxième refuge pour faire le sommet de Mgoun ou pour diviser le temps d\accès à ce sommet en 3 jours (une nuit dans ce refuge puis l\autre nuit dans le refuge de Targdite)</p>
+                <button><a href="/page-de-refuges/public/index.html?id=11" target="_blank"> Voir le site</a></button>
+
+            </div>
+        </div>
+        <div class="refuge">
+            <img src="images/7.jpg" alt="Refuge Tizirane">
+            <div class="refuge-info">
+                <h3>Refuge Tizirane</h3>
+                <p>Bab_Bered, Maroc-1200-25 places</p>
+                <p>Gardien(ne) : Mohammed Ojan</p>
+                <p>Tel : 0678343091</p>
+                <p>Refuge pour avoir la nuit avant faire le sommet de Tizirane</p>
+                <button><a href="/page-de-refuges/public/index.html?id=7" target="_blank"> Voir le site</a></button>
+
+            </div>
+        </div>
+    </div>
+    <script src="./script.js">
+        
+    </script>
+
+
+    
+
+</body>
+</html>

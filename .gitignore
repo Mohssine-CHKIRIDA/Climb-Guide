@@ -1,0 +1,48 @@
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+*.out
+*.err
+
+# Temporary files and backups
+*.tmp
+*.bak
+*.swp
+*.swo
+*.~*
+
+# IDE or editor-specific files
+.vscode/
+.idea/
+*.iml
+# Local environment files
+.env
+.local/
+config.local.json
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
