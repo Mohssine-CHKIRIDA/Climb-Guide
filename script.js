@@ -41,7 +41,7 @@ async function displayRefuges() {
                     <img src="images/${refuge.id_refuge}.jpg" alt="${refuge.nom}">
                     <div class="refuge-info">
                         <h3>${refuge.nom}</h3>
-                        <p>${refuge.localisation}-${refuge.altitude}-${refuge.capacite} places</p>
+                        <p>${refuge.localisation }- ${refuge.altitude}m -${refuge.capacite} places</p>
                         <p>Gardien(ne) : ${refuge.gardien}</p>
                         <p>Tel : ${refuge.contact}</p>
                         <p>${refuge.description}</p>
