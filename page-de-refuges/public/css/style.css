@@ -1,0 +1,667 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --text-color: #333;
+    --light-bg: #f5f6fa;
+    --white: #ffffff;
+    --accent-color: #e67e22;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Hero Section */
+.hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://www.refugedutoubkal.com/theme/assets/img/flex_slides/slide_0.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.location, .altitude,.Contact,.Gardien{
+    display: flex;
+    align-items: right;
+    justify-content: left;
+    gap: 0.8rem;
+    margin: 0.8rem 0;
+    font-size: 1.2rem;
+}
+
+.location i, .altitude i,.Contact i, .Gardien i {
+    color: var(--accent-color);
+}
+
+/* Cards 
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/*.card i {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+/* Services & Equipment */
+.services, .equipment {
+    margin: 3rem 0;
+}
+
+.services h2, .equipment h2 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.services-grid, .equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.service-item, .equipment-item {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover, .equipment-item:hover {
+    transform: translateY(-5px);
+}
+
+.service-item img {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 1rem;
+}
+
+.equipment-item i {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+/* Description */
+.description {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+}
+
+.description-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.text-primary {
+    color: var(--accent-color);
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+    
+    .services-grid, .equipment-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+/* Style de base pour les sections */
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre des sections 
+section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #333;
+}*/
+
+/* Grille de contenu pour services et équipements */
+.services-grid, .equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+/* Style pour chaque élément (service ou équipement) */
+.service-item, .equipment-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image dans les services */
+.service-item img {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Icônes pour les équipements */
+.equipment-item img {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.equipment-item i {
+    font-size: 40px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Texte des services et équipements */
+.service-item p, .equipment-item p {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Effets au survol */
+.service-item:hover, .equipment-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 7px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Section de nombre de place et prix  */
+.nombre_de_place_et_prix {
+    margin: 20px;
+    padding: 20px;
+    background-color: #eef6f9;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #0078a0;
+}
+
+/* Titre de la section */
+.nombre_de_place_et_prix {
+    font-size: 20px;
+    color: #005970;
+    display: block;
+    align-items: left;
+    justify-content: left;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.prix_de_refuge{
+    padding-left: 60px;
+}
+.nombre_de_place_et_prix {
+    transform: translateY(-5px);
+    box-shadow: 0 7px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nombre_de_place_et_prix .places {
+    color: #0078a0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Section parent pour services et équipements */
+.services-equipment-container {
+    display: flex;
+    justify-content: space-between; /* Espace uniforme entre les colonnes */
+    align-items: flex-start; /* Aligne les éléments en haut */
+    gap: 1rem; /* Espacement entre les deux sections */
+}
+
+/* Alignement individuel des sections */
+.services, .equipment {
+    flex: 1; /* Les deux colonnes prennent une largeur égale */
+    margin: 0; /* Supprime les marges supplémentaires */
+    min-height: 100%; /* Force une hauteur similaire */
+}
+
+/* Grille des items */
+.services-grid, .equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Ajuste automatiquement selon la largeur */
+    gap: 1rem; /* Espace entre les items */
+}
+
+/* Uniformité des items */
+.service-item, .equipment-item {
+    padding: 0.8rem; /* Ajuste l'espace interne */
+    font-size: 0.9rem; /* Texte légèrement réduit */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Léger ombrage */
+}
+
+/* Icônes des items */
+.service-item img, .equipment-item i {
+    width: 40px; /* Taille des icônes */
+    height: 40px;
+    margin-bottom: 0.5rem;
+}
+
+
+/* Section Guides Disponibles */
+.guides {
+    margin-top: 2rem;
+}
+.guides h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+.guides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+.guide-item {
+    background: #ffffff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.guide-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.guide-item img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1rem;
+}
+.guide-item p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0.3rem 0;
+}
+.guide-item strong {
+    color: #333;
+}
+
+/* Summits Section */
+.summits {
+    margin: 3rem 0;
+}
+
+.summits h2 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.summits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.summit-item {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.summit-item:hover {
+    transform: translateY(-5px);
+}
+
+.summit-item i {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.summit-item h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.summit-item p {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin: 0.5rem 0;
+}
+
+
+/* Style général */
+.reservation {
+    margin: 2rem auto;
+    max-width: 800px;
+    font-family: 'Arial', sans-serif;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Bouton Réserver */
+.btn-reserve {
+    background-color: #3498db;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-reserve:hover {
+    background-color: #2874a6;
+}
+
+/* Barre d'étapes */
+.stepper {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+
+.step {
+    text-align: center;
+    flex: 1;
+    position: relative;
+}
+
+.step span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #ccc;
+    color: white;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.step.active span {
+    background-color: #3498db;
+}
+
+.step p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #2c3e50;
+}
+
+.step::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: -50%;
+    height: 3px;
+    width: 100%;
+    background: #ccc;
+    z-index: -1;
+}
+
+.step.active::after {
+    background: #3498db;
+}
+
+.step:last-child::after {
+    display: none;
+}
+
+/* Étapes */
+.step-content {
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.step-content h3 {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.radio-group label {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.summary {
+    background-color: #f3f4f6;
+    padding: 1.5rem;
+    border-radius: 5px;
+    line-height: 1.6;
+}
+
+/* Boutons */
+.btn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #ccc;
+    color: #333;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Mise à jour du style de la barre d'étapes */
+.stepper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+    position: relative;
+    max-width: 800px;
+    padding: 0 40px;
+}
+
+.step {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.step span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background-color: #e0e0e0;
+    color: #666;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+.step.active span {
+    background-color: #03a9f4;
+    color: white;
+}
+
+.step p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+.step.active p {
+    color: #03a9f4;
+    font-weight: bold;
+}
+
+.step::after {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    background: #e0e0e0;
+    z-index: -1;
+}
+
+.step.active::after {
+    background: #03a9f4;
+}
+
+.step:last-child::after {
+    display: none;
+}
+
+/* Style des boutons de navigation */
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding: 0 1rem;
+}
+
+.btn {
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #03a9f4;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #e0e0e0;
+    color: #666;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn:not(:disabled):hover {
+    opacity: 0.9;
+}
+
+/* Responsivité pour écrans plus petits */
+@media (max-width: 768px) {
+    .services-grid, .equipment-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    section h2 {
+        font-size: 20px;
+    }
+
+    .service-item p, .equipment-item p {
+        font-size: 14px;
+    }
+}

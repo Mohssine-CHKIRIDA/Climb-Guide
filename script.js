@@ -5,7 +5,7 @@ async function displayRefuges() {
     const sommet = document.getElementById("mountains").value;
 
     // Construire l'URL avec les paramètres de requête
-    const url = new URL("http://localhost:4000/refuge");
+    const url = new URL("http://localhost:5000/refuge");
     url.searchParams.append("country", country);
     url.searchParams.append("region", region);
     url.searchParams.append("sommet", sommet);

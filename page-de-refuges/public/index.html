@@ -1,0 +1,197 @@
+<!-- frontend/refuge.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails du Refuge</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1 id="refuge-name"></h1>
+            <div class="location">
+                <p></p>
+            </div>
+            <div class="altitude">
+                <p></p>
+            </div>
+            <div class="Contact">
+                <p></p>
+            </div>
+            <div class="Gardien">
+                <p></p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="description">
+            <div class="description-header">
+                <i class="fas fa-info-circle fa-2x"></i>
+                <h2>Description</h2>
+            </div>
+            <p id="refuge-description"></p>
+        </section>
+
+        <div class="services-equipment-container">
+            <!-- Services Disponibles -->
+            <section class="services">
+                <h2><i class="fas fa-concierge-bell"></i> Services Disponibles</h2>
+                <div class="services-grid" id="services-container">
+                    <!-- Les services seront chargés dynamiquement -->
+                </div>
+            </section>
+
+            <!-- Équipements Disponibles -->
+            <section class="equipment">
+                <h2><i class="fas fa-tools"></i> Équipement Disponible</h2>
+                <div class="equipment-grid" id="equipment-container">
+                    <!-- Les équipements seront chargés dynamiquement -->
+                </div>
+            </section>
+        </div>
+
+        <!-- Nombre de Places et Prix -->
+        <section class="nombre_de_place_et_prix">
+            <h4>
+                <i class="fas fa-bed"></i>
+                Nombre de Places dans ce Refuge: <span class="places"><br></span>
+            </h4>
+            <h4><i class="fas fa-coins"></i> Prix de Nuit au Refuge:</h4>
+            <ul class="prix_de_refuge">
+                <li class="prix_sans_Restauration"></li>
+                <li class="prix_avec_Restauration"></li>
+            </ul>
+        </section>
+
+        <!-- Section Guides Disponibles -->
+        <div class="guides">
+            <h3><i class="fas fa-hiking"></i> Guides Disponibles:</h3>
+            <div class="guides-grid" id="guides-container">
+                <!-- Les guides seront chargés dynamiquement -->
+            </div>
+        </div>
+
+        <!-- Section Sommets Accessibles -->
+        <section class="summits">
+            <h2><i class="fas fa-mountain"></i> Sommets Accessibles</h2>
+            <div class="summits-grid" id="summits-container">
+                <!-- Les sommets seront chargés dynamiquement -->
+            </div>
+        </section>
+
+        <!-- Section Réservation -->
+        <section class="reservation">
+            <button id="reserveBtn" class="btn-reserve">Réserver</button>
+
+            <div id="reservationSection" class="hidden">
+                <!-- Barre d'étapes -->
+                <div class="stepper">
+                    <div class="step active" data-step="1">
+                        <span>1</span>
+                        <p>Disponibilités</p>
+                    </div>
+                    <div class="step" data-step="2">
+                        <span>2</span>
+                        <p>Prestations</p>
+                    </div>
+                    <div class="step" data-step="3">
+                        <span>3</span>
+                        <p>Informations Personnelles</p>
+                    </div>
+                    <div class="step" data-step="4">
+                        <span>4</span>
+                        <p>Résumé</p>
+                    </div>
+                </div>
+
+                <!-- Étapes -->
+                <div class="steps-container">
+                    <!-- Étape 1 -->
+                    <div class="step-content active" data-step="1">
+                        <h3>Disponibilités</h3>
+                        <form class="form-group">
+                            <label for="arrival">Date d'arrivée :</label>
+                            <input type="date" id="arrival" name="arrival" required>
+                            
+                            <label for="departure">Date de départ :</label>
+                            <input type="date" id="departure" name="departure" required>
+                            
+                            <label for="people">Nombre de personnes :</label>
+                            <input type="number" id="people" name="people" min="1" max="30" required>
+                        </form>
+                    </div>
+
+                    <!-- Étape 2 -->
+                    <div class="step-content hidden" data-step="2">
+                        <h3>Prestations</h3>
+                        <form class="form-group">
+                            <label>Séjour :</label>
+                            <div class="radio-group">
+                                <label>
+                                    <input type="radio" name="stay" value="sans_restauration" checked>
+                                    Sans restauration
+                                </label>
+                                <label>
+                                    <input type="radio" name="stay" value="avec_restauration">
+                                    Avec restauration
+                                </label>
+                            </div>
+
+                            <label for="guide">Choisir un guide :</label>
+                            <select id="guide">
+                                <option value="0" selected>Pas de guide</option>
+                                <!-- Les options seront chargées dynamiquement -->
+                            </select>
+                        </form>
+                    </div>
+
+                    <!-- Étape 3 -->
+                    <div class="step-content hidden" data-step="3">
+                        <h3>Informations Personnelles</h3>
+                        <form class="form-group">
+                            <label for="client-name">Nom :</label>
+                            <input type="text" id="client-name" placeholder="Entrez votre nom" required>
+                            
+                            <label for="client-surname">Prénom :</label>
+                            <input type="text" id="client-surname" placeholder="Entrez votre prénom" required>
+                            
+                            <label for="client-phone">Téléphone :</label>
+                            <input type="tel" id="client-phone" placeholder="+212 ..." required>
+                            
+                            <label for="client-email">Email :</label>
+                            <input type="email" id="client-email" placeholder="example@email.com" required>
+                        </form>
+                    </div>
+
+                    <!-- Étape 4 -->
+                    <div class="step-content hidden" data-step="4">
+                        <h3>Résumé</h3>
+                        <div class="summary">
+                            <p><strong>Date d'arrivée :</strong> <span id="summary-arrival"></span></p>
+                            <p><strong>Date de départ :</strong> <span id="summary-departure"></span></p>
+                            <p><strong>Nombre de personnes :</strong> <span id="summary-people"></span></p>
+                            <p><strong>Séjour :</strong> <span id="summary-stay"></span></p>
+                            <p><strong>Guide :</strong> <span id="summary-guide"></span></p>
+                            <p><strong>Prix Total :</strong> <span id="summary-price"></span></p>
+                        </div>
+                        <button class="btn-confirm">Confirmer</button>
+                        <button class="btn-cancel">Annuler</button>
+                    </div>
+                </div>
+
+                <!-- Boutons de navigation -->
+                <div class="navigation-buttons">
+                    <button id="prevBtn" class="btn btn-secondary" disabled>Précédent</button>
+                    <button id="nextBtn" class="btn btn-primary">Suivant</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>
