@@ -58,7 +58,6 @@ body {
 }
 
 .bg-image {
-    background-image: url("/images/Chogori (2).jpg");
     filter: blur(8px);
     position: fixed;
     top: 0;
