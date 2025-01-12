@@ -45,7 +45,7 @@ async function displayRefuges() {
                         <p>Gardien(ne) : ${refuge.gardien}</p>
                         <p>Tel : ${refuge.contact}</p>
                         <p>${refuge.description}</p>
-                        <button><a href="page-de-refuges/public/index.html?id=${refuge.id_refuge}" target="_blank"> Voir le site</a></button>
+                        <button><a href="/page-de-refuges/public/index.html?id=${refuge.id_refuge}" target="_blank"> Voir le site</a></button>
 
                     </div>
                 </div>
