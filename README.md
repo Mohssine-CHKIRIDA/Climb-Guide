@@ -18,8 +18,8 @@ Avant de commencer, assurez-vous d'avoir :
 
 ### 1. Lancer le premier serveur 
 1. Ouvrez **Visual Studio Code**.
-2. Dans le terminal intégré (ou un autre terminal), accédez au répertoire racine de votre projet où se trouve le fichier `server.js`. Par exemple : cd /path/to/your/project
-3. Lancez le serveur backend avec la commande suivante : node server.js
+2. Dans le terminal intégré (ou un autre terminal), accédez au répertoire racine de votre projet où se trouve le fichier `server.js`. Par exemple : ```cd /path/to/your/project```
+3. Lancez le serveur backend avec la commande suivante : ```node server.js ```
    - Cette commande démarre le serveur backend sur le **port 5000**.
 - Si tout fonctionne correctement, vous devriez voir un message similaire dans le terminal :
   ```
@@ -28,18 +28,12 @@ Avant de commencer, assurez-vous d'avoir :
 
 ---
 
-### 3. Ouvrir le fichier `index.html` avec Live Server
-1. Dans Visual Studio Code, cliquez avec le bouton droit sur le fichier **`index.html`**.
-2. Sélectionnez **Open with Live Server** dans le menu contextuel.
-3. Cela ouvrira automatiquement l'application dans votre navigateur par défaut.
-
----
 
 ### 2. Lancer le deuxième serveur 
 1. Ouvrez un **nouveau terminal** dans Visual Studio Code (ou utilisez un autre terminal).
-2. Accédez au répertoire contenant la deuxième page de l'application, par exemple :cd /path/to/your/project/Climb-Guide/page-de-refuges
-3. Installez les dépendances nécessaires si ce n'est pas encore fait : npm install
-4. Lancez le serveur de la deuxième page avec la commande suivante :npm run dev
+2. Accédez au répertoire contenant la deuxième page de l'application, par exemple : ```cd /path/to/your/project/Climb-Guide/page-de-refuges```
+3. Installez les dépendances nécessaires si ce n'est pas encore fait : ```npm install```
+4. Lancez le serveur de la deuxième page avec la commande suivante :```npm run dev```
    - Vous devriez voir un message similaire dans le terminal :
   ```
   > gestion-refuges@1.0.0 dev
@@ -60,7 +54,11 @@ Avant de commencer, assurez-vous d'avoir :
   ```
 
 ---
-
+### 3. Ouvrir le fichier `index.html` avec Live Server
+1. Dans Visual Studio Code, cliquez avec le bouton droit sur le fichier **`index.html`**.
+2. Sélectionnez **Open with Live Server** dans le menu contextuel.
+3. Cela ouvrira automatiquement l'application dans votre navigateur par défaut.
+---
 ## Notes supplémentaires
 - **Backend (API1)** : [http://localhost:5000](http://localhost:5000)
 - **Backend (API2)** : [http://localhost:4000](http://localhost:4000)
