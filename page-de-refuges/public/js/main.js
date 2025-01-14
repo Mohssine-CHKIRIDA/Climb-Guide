@@ -2,7 +2,7 @@
 // Fonction pour récupérer les détails d'un refuge par ID
 async function fetchRefugeDetails(id) {
     try {
-        const response = await fetch(`http://localhost:3000/api/refuges/${id}`);
+        const response = await fetch(`http://localhost:4000/api/refuges/${id}`);
         if (!response.ok) {
             throw new Error('Erreur lors du chargement des détails du refuge');
         }
@@ -97,7 +97,7 @@ function getEquipmentIcon(equipement) {
         'Crampons': './images/Crampons.png',
         'Piolets': './images/Piolets.png',
         'Tentes': './images/Tentes.png',
-        'Raquettes à neige': 'snowflake'
+        'Battons de randonnées': './images/Battons_de_randonnées copy.png'
     };
     return icons[equipement];
 }
@@ -225,7 +225,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Envoyer la réservation au backend
         try {
-            const response = await fetch('http://localhost:3000/api/reservations', {
+            const response = await fetch('http://localhost:4000/api/reservations', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -286,7 +286,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initialiser les données des services et équipements
     async function fetchServicesAndEquipments() {
         try {
-            const response = await fetch(`http://localhost:3000/api/refuges/2`);
+            const response = await fetch(`http://localhost:4000/api/refuges/2`);
             if (!response.ok) {
                 throw new Error('Erreur lors du chargement des services et équipements');
             }
